@@ -2,21 +2,8 @@
   background-color: black;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 159px;
-}
-
-.footerIcon1,
-.footerIcon2,
-.footerIcon3 {
-  flex: 33.33%;
-}
-
-.footerIcon1 {
-  margin-left: 64px;
-}
-
-.footerIcon3 {
-  margin-right: 64px;
+  gap: 29px;
 }

@@ -2,6 +2,7 @@ import Head from 'next/head';
 // import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
+import Landing from '@/components/landing/Landing';
 // import Swipe from '@/components/swipe/Swipe';
 import InfiniteSwipe from '@/components/infiniteSwipe/InfiniteSwipe';
 import Footer from '@/components/footer/Footer';
@@ -22,6 +23,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className={styles.main}>
+        {/* <Landing /> */}
        {/*  <Swipe /> */}
         <InfiniteSwipe />
         <Footer />
