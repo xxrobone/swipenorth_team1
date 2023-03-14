@@ -7,7 +7,7 @@ import IMG3 from '/public/images/image3.png'
 import IMG4 from '/public/images/image4.png'
 
 //styles
-import '../videocarousel/Carousel.scss'
+import '../swipe.scss'
 // swipe component
 import SwipeUpArrow from '../button/swipeUpArrow/SwipeUpArrow'
 
@@ -56,8 +56,8 @@ const Swipe = () => {
     }, [width])
 
   return (
-      <motion.div className='carousel' ref={(elRef)}>
-          <motion.div className="inner_carousel"
+      <motion.div className='swipe_wrapper' ref={(elRef)}>
+          <motion.div className="swipe_inner"
               drag='x'
               dragConstraints={{right: 0, left: - width}}>
               {imageData.map(({ name, details, id, img }, i) => (
