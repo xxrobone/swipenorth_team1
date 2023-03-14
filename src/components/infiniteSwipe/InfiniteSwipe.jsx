@@ -5,7 +5,6 @@ import IMG1 from '/public/images/image1.png'
 import IMG2 from '/public/images/image2.png'
 import IMG3 from '/public/images/image3.png'
 import IMG4 from '/public/images/image4.png'
-import SwipeUpArrow from '../swipeUpArrow/SwipeUpArrow'
 
 // styles
 import styles from './InfiniteSwipe.module.scss'
@@ -128,7 +127,7 @@ const InfiniteSwipe = () => {
           <Card 
             card={card}
             key={index}
-            style={{ x, y, zIndex: index }}
+            style={{ x, y, zIndex: 1 }}
             onDirectionLock={axis => onDirectionLock(axis)}
             onDragEnd={(e, info) => onDragEnd(info)}
             animate={dragStart.animation}
