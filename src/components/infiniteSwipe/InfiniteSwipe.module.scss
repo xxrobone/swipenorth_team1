@@ -1,0 +1,48 @@
+.infinite_swipe {
+    position: relative;
+    width: 100svw;
+    height: 100svh;
+    display: grid;
+    place-items: center center;
+    z-index: 1;
+
+    .card {
+        margin: 0 auto;
+        width: 100svw;
+        height: 100svh;
+        max-height: calc(100svh - 20rem);
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: -1;        
+        color: #fff;
+        object-fit: contain;
+        object-position: center;
+
+        .img {
+            width: 100%;
+            height: 100%;
+            
+        }
+
+      .info {
+        position: absolute;
+        left: 2rem;
+        bottom: 4rem;
+        z-index: 2;
+        text-align: center;
+
+        h2 {
+            text-align: left;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        p {
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+      }
+    }
+  }
