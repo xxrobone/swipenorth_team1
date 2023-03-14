@@ -1,0 +1,59 @@
+.swipe_wrapper {
+    margin: 11vh auto 9.938rem;
+    width: 100svw;
+    max-width: 45rem;
+    height: 100svh;
+    max-height: 80vh;
+    position: relative;
+    overflow: hidden;
+    
+
+    .swipe_inner {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+        cursor: grab;
+
+        ::-webkit-scrollbar {
+            display: none;
+          }
+
+        .item {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            pointer-events: none;
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+
+        }
+
+        .info {
+            position: absolute;
+            left: 2rem;
+            bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                font-weight: 600;
+                font-size: 1.6rem;
+            }
+            
+            h4 {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

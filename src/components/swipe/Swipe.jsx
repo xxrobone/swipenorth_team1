@@ -5,15 +5,15 @@ import IMG1 from '/public/images/image1.png'
 import IMG2 from '/public/images/image2.png'
 import IMG3 from '/public/images/image3.png'
 import IMG4 from '/public/images/image4.png'
+import SwipeUpArrow from '../swipeUpArrow/SwipeUpArrow'
 
 //styles
-import '../swipe.scss'
-// swipe component
-import SwipeUpArrow from '../button/swipeUpArrow/SwipeUpArrow'
+import styles from './Swipe.module.scss'
+
 
 export const imageData = [
     {
-      title: 'Skellefteå tax',
+      title: 'Skellefteå taxi',
       desc: 'Taxichaufför',
       id: 1,
       img: IMG1,
@@ -39,34 +39,32 @@ export const imageData = [
   ];
 
 const Swipe = () => {
+  const [height, setHeight] = useState(0)
 
-    const [width, setWidth] = useState(0)
+  const elRef = useRef()
 
-    // use ref is like querySelector
-    const elRef = useRef()
-
-    /* check full width, with element offsetwidth and subract the number and that is the width to add on dragContraints in framermotion */
-    /* let sWidth = elRef.current.scrollWidth
-    let offset = elRef.current.offsetWidth
-    let dragWidth = sWidth - offset */
-
-    useEffect(() => {
-        console.log(elRef.current.scrollWidth, )
-      setWidth(elRef.current.scrollWidth - elRef.current.offsetWidth)
-    }, [width])
+  useEffect(() => {
+    console.log(elRef.current.scrollHeight, )
+  setHeight(elRef.current.scrollHeight - elRef.current.offsetHeight)
+  }, [height])
 
   return (
-      <motion.div className='swipe_wrapper' ref={(elRef)}>
-          <motion.div className="swipe_inner"
-              drag='x'
-              dragConstraints={{right: 0, left: - width}}>
-              {imageData.map(({ name, details, id, img }, i) => (
-                  <motion.div className='item' key={id} >
-                      <div className="item_name">{name}</div>
-                      <div className="item_details">{details}</div>
-                      <Image className='image_frame'
-                        src={img} alt={name}
-                  ></Image>                 
+      <motion.div className={styles.swipe_wrapper} ref={(elRef)}>
+          <motion.div className={styles.swipe_inner}
+              drag='y'
+              dragConstraints={{bottom: 0, top: + height}}>
+              {imageData.map(({ title, desc, id, img }, i) => (
+                  <motion.div className={styles.item} key={id} >
+                  <Image
+                    className={img}
+                    src={img}
+                    alt={title}
+                    priority
+                  ></Image>   
+                  <div className={styles.info}>
+                  <h2>{title}</h2>
+                  <h4>{desc}</h4>
+                  </div>
       </motion.div>
                   
               ))}
