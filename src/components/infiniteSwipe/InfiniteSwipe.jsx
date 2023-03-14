@@ -37,20 +37,17 @@ export const ImageData = [
       img: IMG4,
     },
 ];
-
-console.log(ImageData[0].img)
   
-const colors = ['#FFBE0B', '#FB5607', '#FF006E', '#8338EC', '#3A86FF'];
+const Images = [ImageData[1].img, ImageData[2].img, ImageData[3].img, ImageData[0].img];
 
 const randomImage = current => {
   while (true) {
-    const index = Math.floor(Math.random() * ImageData.length);
-    if (current != ImageData[index]) {
-      return ImageData[index].img;
+    const index = Math.floor(Math.random() * Images.length);
+    if (current != Images[index]) {
+      return Images[index];
     } 
   }
 }
-
 const Card = ({ card, style, onDirectionLock, onDragStart, onDragEnd, animate }) => (    
   <motion.div
     className={styles.card}
@@ -60,22 +57,29 @@ const Card = ({ card, style, onDirectionLock, onDragStart, onDragEnd, animate })
     onDirectionLock={onDirectionLock}
     onDragEnd={onDragEnd}
     animate={animate}
-    style={{ ...style, backgroundImage: card.backgroundImage }}
+    style={{ ...style }}
     transition={{ ease: [.6, .05, -.01, .9] }}
     whileTap={{ scale: .85 }}
-  >
-        <p>{card.text}</p>
+    >
+        <div className={styles.info}>
+            <h2>{card.title}</h2>
+            <p>{card.desc}</p>
+        </div>
+        
         <Image
-            src={ImageData[0].img}
-            alt={ImageData[0].title}
+            className={styles.img}
+            src={card.img}
+            alt={card.title}
+            fill 
+            priority
         ></Image>
   </motion.div>
 )
 const InfiniteSwipe = () => {
   const [cards, setCards] = useState([
-    { text: 'Skellefteå taxi', backgroundImage: ImageData[1].img }, 
-    { text: 'Northvold', backgroundImage: ImageData[2].img }, 
-    { text: 'Skellefteå Lasarett', backgroundImage: ImageData[0].img }
+      { title: ImageData[0].title, desc: ImageData[0].desc, img: Images[0] }, 
+    { title: ImageData[1].title, desc: ImageData[1].desc, img: Images[1] }, 
+    { title: ImageData[2].title, desc: ImageData[2].desc, img: Images[2] }
   ]);
   const [dragStart, setDragStart] = useState({
     axis: null,
@@ -83,9 +87,9 @@ const InfiniteSwipe = () => {
   });
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const scale = useTransform(dragStart.axis === 'x' ? x : y, [-175, 0, 175], [1, .5, 1]);
-  const shadowBlur = useTransform(dragStart.axis === 'x' ? x : y, [-175, 0, 175], [0, 25, 0]);
-  const shadowOpacity = useTransform(dragStart.axis === 'x' ? x : y, [-175, 0, 175], [0, .2, 0]);
+  const scale = useTransform(dragStart.axis === 'x' ? x : y, [-360, 0, 360], [1, .5, 1]);
+  const shadowBlur = useTransform(dragStart.axis === 'x' ? x : y, [-360, 0, 360], [0, 25, 0]);
+  const shadowOpacity = useTransform(dragStart.axis === 'x' ? x : y, [-360, 0, 360], [0, .2, 0]);
   const boxShadow = useMotionTemplate`0 ${shadowBlur}px 25px -5px rgba(0, 0, 0, ${shadowOpacity})`;
   const onDirectionLock = axis => setDragStart({ ...dragStart, axis: axis });
   const animateCardSwipe = animation => {
@@ -96,22 +100,23 @@ const InfiniteSwipe = () => {
       x.set(0);
       y.set(0);
       setCards([{ 
-          text: 'Title + desc', 
-          backgroundImage: randomImage(cards[0].backgroundImage) 
+          title: 'Job Title', 
+          desc: 'Job subtitle',
+          img: randomImage(cards[0].img) 
         }, ...cards.slice(0, cards.length - 1)]);
     }, 200);
   }
   const onDragEnd = info => {
     if (dragStart.axis === 'x') {
       if (info.offset.x >= 100) 
-        animateCardSwipe({ x: 175, y: 0 });
+        animateCardSwipe({ x: 360, y: 0 });
       else if (info.offset.x <= -100)
-        animateCardSwipe({ x: -175, y: 0 }); 
+        animateCardSwipe({ x: -360, y: 0 }); 
     } else {
       if (info.offset.y >= 100)
-        animateCardSwipe({ x: 0, y: 175 }); 
+        animateCardSwipe({ x: 0, y: 360 }); 
       else if (info.offset.y <= -100)
-        animateCardSwipe({ x: 0, y: -175 }); 
+        animateCardSwipe({ x: 0, y: -360 }); 
     }
     }
     
@@ -131,7 +136,8 @@ const InfiniteSwipe = () => {
         )
       } else return (
         <Card 
-          card={card}
+              card={card}
+              img={card.img}
           key={index}
           style={{
             scale, 

@@ -21,8 +21,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className={styles.main}>
-        <h1>Swipe North clean project</h1>
-        {/*  <Swipe /> */}
+       {/*  <Swipe /> */}
         <InfiniteSwipe />
       </main>
     </>
