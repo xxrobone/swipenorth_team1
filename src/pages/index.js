@@ -1,9 +1,10 @@
 import Head from 'next/head';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
-import Swipe from '@/components/swipe/Swipe';
+// import Swipe from '@/components/swipe/Swipe';
 import InfiniteSwipe from '@/components/infiniteSwipe/InfiniteSwipe';
+import Footer from '@/components/footer/Footer';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -23,6 +24,7 @@ export default function Home() {
       <main className={styles.main}>
        {/*  <Swipe /> */}
         <InfiniteSwipe />
+        <Footer />
       </main>
     </>
   );
