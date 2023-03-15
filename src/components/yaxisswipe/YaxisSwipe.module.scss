@@ -1,12 +1,11 @@
 .yaxis_swipe {
     position: absolute;
     top: 176px;
-    bottom: 159px;
     /* width: 100svw; */
         max-width: 360px;
         width: 100svw;
         min-height: 60vh; 
-        max-height: 80vh; 
+        max-height: 80svh;
     display: grid;
     place-items: center center;
     z-index: 1;
@@ -14,7 +13,7 @@
     .card {
         width: 100svw;
         min-height: 60vh; 
-        max-height: 80vh;       
+        max-height: 100%;       
         position: absolute;
         left: 0;
         top: 0px;
