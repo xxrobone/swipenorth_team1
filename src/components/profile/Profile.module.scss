@@ -1,0 +1,38 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #FFFFFF;
+    width: 100svw;
+    height: 100svh;
+}
+.main p{
+    color: #000;
+    margin: 43px 18px 34px;
+    line-height: 24.2px;
+}
+.name{
+    font-size:20px;
+    line-height:24.2px;
+}
+.name span{
+    font-weight: 700;
+}
+.main hr{
+    margin: 19px;
+    border-width:0;
+    height: 1px;
+    color:rgba(0, 0, 0, 0.15);
+    background-color:rgba(0, 0, 0, 0.15);
+}
+.image{
+    margin-top:219px;
+    width: auto;
+}
+.profilePic{
+    padding: 20px;
+    border-radius: 100%;
+}
+
