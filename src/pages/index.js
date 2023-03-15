@@ -1,7 +1,11 @@
 import Head from 'next/head';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import YaxisSwipe from '@/components/yaxisswipe/YaxisSwipe';
+import styles from '@/styles/Home.module.css';
+import Landing from '@/components/landing/Landing'
+import Footer from '@/components/footer/Footer';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,6 +23,8 @@ export default function Home() {
       </Head>
       <main>
         <YaxisSwipe />
+        {/* <Landing /> */}
+        <Footer />
       </main>
     </>
   );
