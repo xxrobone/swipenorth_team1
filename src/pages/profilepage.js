@@ -1,6 +1,5 @@
 import React from 'react'
-import Profile from '@/components/profile/profile'
-import VisaCV from '@/components/visacv/VisaCV'
+import Profile from '@/components/profile/Profile'
 
 export default function profilepage() {
   return (
