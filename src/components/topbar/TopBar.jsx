@@ -1,7 +1,7 @@
 import React from 'react'
 import SwipeUpArrow from '../swipeUpArrow/SwipeUpArrow'
 
-import styles from './TopBar.module.scss'
+import styles from './TopBar.module.css'
 
 const TopBar = () => {
   return (
