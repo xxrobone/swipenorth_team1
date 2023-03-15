@@ -13,8 +13,13 @@ export default function Profile() {
             <p>Elise, 27 år Taxichaufför </p>
         </div>
         <hr/>
-        <p>Jag är en serviceinriktad person som trivs med att möta och samarbeta med nya människor. 
-            Jag sätter en stor heder i punktlighet och är stolt över att vara en duktig förare.</p>
+        <p>Karl är en erfaren och kommunikativ problemlösare med fem års erfarenhet av tidigare 
+           ledartjänster inom den offentliga sektorn samt det ideella föreningslivet. Han har 
+           samtidigt alltid haft ett brett intresse av IT och har ägnat sin fritid åt att utvidga 
+           det intresset. Karl trivs med att samarbeta med andra liksom att driva arbetsuppgifter 
+           på egen hand för att kunna prestera högt och visa goda resultat. På sin senaste arbetsplats 
+           samt i det ideella arbetet har Karl arbetat med projektledning, 
+           resultatorientering och beslutsfattande i myndighetsärenden.</p>
     </div>
     </>
   )
