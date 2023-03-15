@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from "/src/styles/savedJobs.module.css"
+import styles from "../savedJobs/savedJobs.module.css"
 
 
 function Job(obj) {
