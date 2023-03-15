@@ -1,7 +1,6 @@
 import Head from 'next/head';
 // import Job from '../components/savedJobs/savedJobs'
 import { Inter } from 'next/font/google';
-import YaxisSwipe from '@/components/yaxisswipe/YaxisSwipe';
 import styles from '@/styles/Home.module.css';
 import Landing from '@/components/landing/Landing';
 import TopBar from '@/components/topbar/TopBar';
@@ -22,7 +21,6 @@ export default function Home() {
       </Head>
       <main>
         <TopBar />
-        <YaxisSwipe />
         {/* <Landing /> */}
       </main>
     </>
