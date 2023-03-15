@@ -3,7 +3,7 @@ import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 
 // styles
-import styles from './YaxisSwipe.module.css'
+import styles from './YSwipe.module.css'
 
 
 
