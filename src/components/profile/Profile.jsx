@@ -8,10 +8,10 @@ export default function Profile() {
   return (
       <>
       <div className={styles.main}>
-        <div className={styles.image}>
+        <div className={styles.profileCard}>
+          <div className={styles.image}>
             <Image className={styles.profilePic} src={profilepic} alt="profile picture" height={314} width={314} />
-        </div>
-        <div>
+          </div>
             <div className={styles.name}>
                <p><span>Christian</span>, 32 år
                <br/>
@@ -24,10 +24,8 @@ export default function Profile() {
               fritid åt att utvidga det intresset. Jag trivs med att samarbeta med andra 
               liksom att driva arbetsuppgifter på egen hand för att kunna prestera högt och 
               visa goda resultat. På min senaste arbetsplats samt i det ideella arbetet har jag 
-              arbetat med projektledning, resultatorientering och beslutsfattande i myndighetsärenden.</p>
-        </div>
-        <div>
-            {/* <VisaCV /> */}
+              arbetat med projektledning, resultatorientering och beslutsfattande i myndighetsärenden.
+            </p>
         </div>
       </div>
     </>
