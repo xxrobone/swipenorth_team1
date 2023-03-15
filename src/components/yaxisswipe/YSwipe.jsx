@@ -23,6 +23,7 @@ const YSwipe = ({data, options}) => {
                       className={styles.embla__slide__img}
                 src={img}
                 alt={title}
+                priority
                   />
                   <div className={styles.info}>
                     <h2>{title}</h2>
