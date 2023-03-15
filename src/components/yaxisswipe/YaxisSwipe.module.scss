@@ -1,16 +1,16 @@
-.infinite_swipe {
+.yaxis_swipe {
+    margin: 0 auto;
     position: relative;
-    width: 100svw;
-    height: 100svh;
+    /* width: 100svw; */
+    max-width: 360px;
+    max-height: 80vh;
     display: grid;
     place-items: center center;
     z-index: 1;
 
     .card {
-        margin: 0 auto;
-        width: 100svw;
-        height: 100svh;
-        max-height: calc(100svh - 20rem);
+        width: 360px;
+        height: 60vh;        
         position: absolute;
         left: 0;
         top: 0px;

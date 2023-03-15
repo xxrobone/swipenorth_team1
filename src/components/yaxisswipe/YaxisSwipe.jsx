@@ -7,7 +7,7 @@ import IMG3 from '/public/images/image3.png'
 import IMG4 from '/public/images/image4.png'
 
 // styles
-import styles from './InfiniteSwipe.module.scss'
+import styles from './YaxisSwipe.module.scss'
 
 
 export const ImageData = [
@@ -74,7 +74,7 @@ const Card = ({ card, style, onDirectionLock, onDragStart, onDragEnd, animate })
         ></Image>
   </motion.div>
 )
-const InfiniteSwipe = () => {
+const YaxisSwipe = () => {
   const [cards, setCards] = useState([
       { title: ImageData[0].title, desc: ImageData[0].desc, img: Images[0] }, 
     { title: ImageData[1].title, desc: ImageData[1].desc, img: Images[1] }, 
@@ -107,14 +107,14 @@ const InfiniteSwipe = () => {
   }
   const onDragEnd = info => {
     if (dragStart.axis === 'x') {
-      if (info.offset.x >= 100) 
+      if (info.offset.x >= 200) 
         animateCardSwipe({ x: 360, y: 0 });
-      else if (info.offset.x <= -100)
+      else if (info.offset.x <= -200)
         animateCardSwipe({ x: -360, y: 0 }); 
     } else {
-      if (info.offset.y >= 100)
+      if (info.offset.y >= 200)
         animateCardSwipe({ x: 0, y: 360 }); 
-      else if (info.offset.y <= -100)
+      else if (info.offset.y <= -200)
         animateCardSwipe({ x: 0, y: -360 }); 
     }
     }
@@ -148,10 +148,10 @@ const InfiniteSwipe = () => {
     })
   }
   return (
-    <div className={styles.infinite_swipe}>
+    <div className={styles.yaxis_swipe}>
       {renderCards()}
     </div>
   )
 }
 
-export default InfiniteSwipe
+export default YaxisSwipe
