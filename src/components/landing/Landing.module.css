@@ -39,8 +39,8 @@
 .logo {
   display: flex;
   justify-content: left;
-  left: 2rem;
+  left: 1.61rem;
   position: absolute;
-  top: 2rem;
+  top: 1.25rem;
   z-index: 999;
 }

@@ -10,7 +10,7 @@ export default function Header() {
     <div className={styles.headerContainer}>
       <div className={styles.row}>
         <span className={styles.headerLogo}>
-          <Image src={logoVit} alt="logo" width={85} />
+          <Image src={logoVit} alt="logo" width={107} />
         </span>
       </div>
 
