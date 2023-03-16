@@ -7,11 +7,9 @@ import styles from './Layout.module.scss'
 export default function Layout({ children }) {
     return (
       <>
+         <Header />
         <main className={styles.main}>{children}</main>  
-        <Footer />
-
-        <main className={styles.main}>{children}</main>  
-        <Header />
+        <Footer />      
         </>
     )
   }
