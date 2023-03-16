@@ -12,7 +12,7 @@ export default function VisaCV() {
         transition={{ repeat: Infinity, repeatDelay: 4 }}>
         <Image src={arrowUp} alt="up arrow" />
       </motion.div>
-      <div>
+      <div className={styles.vissa}>
         <h2>VISA CV</h2>
       </div>
     </div>

@@ -18,13 +18,9 @@ export default function Profile() {
                Beslutsfattare </p>
             </div>
             <hr/>
-            <p>Jag är en erfaren och kommunikativ problemlösare med fem års erfarenhet av tidigare 
-              ledartjänster inom den offentliga sektorn samt det ideella föreningslivet. 
-              Jag har samtidigt alltid haft ett brett intresse av IT och har ägnat min 
-              fritid åt att utvidga det intresset. Jag trivs med att samarbeta med andra 
-              liksom att driva arbetsuppgifter på egen hand för att kunna prestera högt och 
-              visa goda resultat. På min senaste arbetsplats samt i det ideella arbetet har jag 
-              arbetat med projektledning, resultatorientering och beslutsfattande i myndighetsärenden.
+            <p>Jag är en erfaren och kommunikativ problemlösare med fem års erfarenhet av tidigare ledartjänster inom den offentliga sektorn samt det ideella föreningslivet.
+              Jag har samtidigt alltid haft ett brett intresse av IT och har ägnat min fritid åt att utvidga det intresset. Jag trivs med att samarbeta med andra liksom att 
+              driva arbetsuppgifter på egen hand för att kunna prestera högt och visa goda resultat. På min senaste arbetsplats samt i det ideella arbetet har jag arbetat med projektledning, resultatorientering och beslutsfattande i myndighetsärenden.
             </p>
         </div>
       </div>
