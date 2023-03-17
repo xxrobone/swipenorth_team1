@@ -2,10 +2,12 @@
   .embla {
     --slide-spacing: 1rem;
     --slide-size: 100%;
-    --slide-height: 60vh;
-    padding: 0rem;
+    --slide-height: 70vh;
   }
   .embla__viewport {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
     overflow: hidden;
   }
   .embla__container {
@@ -23,10 +25,11 @@
    
   }
   .embla__slide__img {
+    margin: 0 auto;
     display: block;    
     width: 100%;
-    height: var(--slide-height);
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     object-position: center;
   }
   .embla__slide__number {
@@ -64,8 +67,8 @@
 
   .info {
     position: absolute;
-    left: 2rem;
-    bottom: 4rem;
+    left: 8vw;
+    bottom: 15vh;
     z-index: 2;
     text-align: center;
   }

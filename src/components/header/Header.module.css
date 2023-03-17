@@ -1,6 +1,6 @@
 .headerContainer {
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 100;
@@ -9,8 +9,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 88px;
-  gap: 29px;
+  height: 5.5rem;
+  gap: 1.8rem;
 }
 
 .headerIcon1 {

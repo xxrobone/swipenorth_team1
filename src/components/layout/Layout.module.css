@@ -1,5 +1,5 @@
-.main {
-    
+.main {  
+    position: relative;  
     margin: 0;
     padding: 0;    
     min-height: 80vh;

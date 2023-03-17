@@ -57,9 +57,9 @@ export default function Home() {
       <main>
         <TopBar />
         {/* <Landing /> */}
-        <section className={styles.swipe_wrapper}>
+        <div className={styles.swipe_wrapper}>
           <YSwipe options={OPTIONS} data={ImageData} />
-        </section>
+        </div>
       </main>
     </>
   );
