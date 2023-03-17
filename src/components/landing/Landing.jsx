@@ -3,6 +3,7 @@ import styles from '../landing/Landing.module.css'
 import SwipeUpArrow from '../swipeUpArrow/SwipeUpArrow'
 import backgroundImage from '../../../public/images/backgroundImage.jpg'
 import logo from '../../../public/images/skelleftea_logo_vit.png'
+import Link from 'next/link'
 
 export default function Landing() {
   return (
@@ -18,7 +19,9 @@ export default function Landing() {
       />
       <div className={styles.content}>
         <h1>Välkommen hem!</h1>
+        <Link href='/'>
         <SwipeUpArrow />
+        </Link>
       </div>
     </div>
   )
