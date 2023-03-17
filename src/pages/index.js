@@ -1,25 +1,21 @@
 import Head from 'next/head';
+import React, { useState } from 'react';
+
 // import Job from '../components/savedJobs/savedJobs'
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import Landing from '@/components/landing/Landing';
 import TopBar from '@/components/topbar/TopBar';
 import YSwipe from '@/components/yaxisswipe/YSwipe';
-
+import JobInfoBox from '../components/jobInfoBox/JobInfoBox';
 
 import IMG1 from '/public/images/image1.png'
 import IMG2 from '/public/images/image2.png'
 import IMG3 from '/public/images/image3.png'
 import IMG4 from '/public/images/image4.png'
 
-
-
 const inter = Inter({ subsets: ['latin'] });
-
 const OPTIONS = { axis: 'y' }
-
-
-
 
 export const ImageData = [
     {
@@ -49,6 +45,18 @@ export const ImageData = [
 ];
 
 export default function Home() {
+  const [displayText, setDisplayText] = useState('');
+  const [showBox, setShowBox] = useState(false);
+
+  function handleClick() {
+    setShowBox(true);
+    setDisplayText('This is some text to display in the JobInfoBox');
+  }
+
+  const closeBox = () => {
+    setShowBox(false);
+  };
+
   return (
     <>
       <Head>
@@ -64,9 +72,14 @@ export default function Home() {
         <TopBar />
         {/* <Landing /> */}
         <section className={styles.swipe_wrapper}>
+        {showBox && <JobInfoBox text={displayText} onClose={closeBox}/>}
+      <button onClick={handleClick}>Display Job Info</button>
+
           <YSwipe options={OPTIONS} data={ImageData} />
     </section>
+
       </main>
     </>
   );
 }
+
