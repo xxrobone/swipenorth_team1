@@ -5,7 +5,8 @@ import backgroundImage from '../../../public/images/backgroundImage.jpg'
 import logo from '../../../public/images/skelleftea_logo_vit.png'
 import Link from 'next/link'
 
-export default function Landing() {
+
+export default function Landing({hasVisited, setHasVisited}) {
   return (
     <div className={styles.main}>
       <div className={styles.logo}>
@@ -19,7 +20,7 @@ export default function Landing() {
       />
       <div className={styles.content}>
         <h1>Välkommen hem!</h1>
-        <Link href='/'>
+        <Link href='/' onClick={() => setHasVisited(true)}>
         <SwipeUpArrow />
         </Link>
       </div>
