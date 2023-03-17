@@ -14,14 +14,13 @@ export default function Profile() {
           </div>
           <div>
             <div className={styles.name}>
-               <p><span>Christian</span>, 32 år
+               <p><span>Elise,</span> 27 år
                <br/>
-               Beslutsfattare </p>
+               Taxichaufför</p>
             </div>
             <hr/>
-            <p>Jag är en erfaren och kommunikativ problemlösare med fem års erfarenhet av tidigare ledartjänster inom den offentliga sektorn samt det ideella föreningslivet.
-              Jag har samtidigt alltid haft ett brett intresse av IT och har ägnat min fritid åt att utvidga det intresset. Jag trivs med att samarbeta med andra liksom att 
-              driva arbetsuppgifter på egen hand för att kunna prestera högt och visa goda resultat. På min senaste arbetsplats samt i det ideella arbetet har jag arbetat med projektledning, resultatorientering och beslutsfattande i myndighetsärenden.
+            <p className={styles.discription}>Jag är en serviceinriktad person som trivs med att möta och samarbeta med nya människor. 
+              Jag sätter en stor heder i punktlighet och är stolt över att vara en duktig förare. 
             </p>
           </div>
         </div>
