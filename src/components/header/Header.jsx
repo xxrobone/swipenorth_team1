@@ -3,7 +3,7 @@ import styles from '../header/Header.module.css'
 import logoVit from '../../../public/images/skelleftea_logo_vit.png'
 import iconVector from '../../../public/images/Vector.png'
 import iconEllipse from '../../../public/images/ellipse.png'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 
 export default function Header() {
