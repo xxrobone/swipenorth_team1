@@ -1,8 +1,8 @@
 
   .embla {
-    --slide-spacing: 1rem;
+    /* --slide-spacing: 1rem;
     --slide-size: 100%;
-    --slide-height: 60vh;
+    --slide-height: 60vh; */
     padding: 0rem;
   }
   .embla__viewport {
@@ -12,9 +12,15 @@
     display: flex;
     flex-direction: column;
     height: calc(var(--slide-spacing) + var(--slide-height));
-    margin-top: calc(var(--slide-spacing) * -1);
-    
+    margin-top: calc(var(--slide-spacing) * -1);    
   }
+
+  /* för att länken skall ha rätt styling eftersom länken omfamnar hela objektet */
+  .embla__container > a {
+    text-decoration: none;
+    color: white;
+  }
+
   .embla__slide {
     position: relative;
     min-height: 0;
@@ -79,7 +85,7 @@
       text-shadow: 2px 3px 5px rgba(0,0,0,0.6);
   }
 
-  .info > p {
+  .info > h4 {
     padding: 0.25rem 0.25rem;
     background-color: black;
     width: fit-content;

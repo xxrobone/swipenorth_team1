@@ -1,46 +1,48 @@
 import Head from 'next/head';
 // import Job from '../components/savedJobs/savedJobs'
-import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
-import Landing from '@/components/landing/Landing';
 import TopBar from '@/components/topbar/TopBar';
-import YSwipe from '@/components/yaxisswipe/YSwipe';
-
+import JobSwipe from '@/components/jobswipe/JobSwipe';
+import { jobData } from '@/data/jobs';
+/* 
 import IMG1 from '/public/images/image1.jpg';
 import IMG2 from '/public/images/image2.jpg';
 import IMG3 from '/public/images/image3.jpg';
 import IMG4 from '/public/images/image4.jpg';
+ */
 
-const inter = Inter({ subsets: ['latin'] });
-
-const OPTIONS = { axis: 'y' };
-
-export const ImageData = [
+/* export const ImageData = [
   {
     title: 'Skellefteå taxi',
-    desc: 'Taxichaufför',
+    subtitle: 'Taxichaufför',
+    desc: 'Du är en serviceinriktad person som trivs med att möta och samarbeta med nya människor. Du sätter en stor heder i punktlighet och är stolt över att vara en duktig förare. Säkerheten för dina passagerare och dina medtrafikanter är självklart i första rummet när du planerar och genomför dina körningar. Både dina kollegor och de du möter i yrket skulle beskriva dig som en utåtriktad och lösningsorienterad person som inte tvekar att hjälpa till.',
     id: 1,
     img: IMG1,
   },
   {
     title: 'Northvold',
-    desc: 'Gruppchef',
+    subtitle: 'Gruppchef',
+    desc: '',
     id: 2,
     img: IMG2,
   },
   {
     title: 'Skellefteå Lasarett',
-    desc: 'Sjuksköterska',
+    subtitle: 'Sjuksköterska',
+    desc: '',
     id: 3,
     img: IMG3,
   },
   {
     title: 'Skellefteå Kommun',
-    desc: 'Förskolepedagog',
+    subtitle: 'Förskolepedagog',
+    desc: '',
     id: 4,
     img: IMG4,
   },
-];
+]; */
+
+const OPTIONS = { axis: 'y' };
 
 export default function Home() {
   return (
@@ -58,7 +60,7 @@ export default function Home() {
         <TopBar />
         {/* <Landing /> */}
         <section className={styles.swipe_wrapper}>
-          <YSwipe options={OPTIONS} data={ImageData} />
+          <JobSwipe options={OPTIONS} data={jobData} />
         </section>
       </>
     </>
