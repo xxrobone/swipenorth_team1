@@ -6,10 +6,10 @@ import Landing from '@/components/landing/Landing';
 import TopBar from '@/components/topbar/TopBar';
 import YSwipe from '@/components/yaxisswipe/YSwipe';
 
-import IMG1 from '/public/images/image1.png';
-import IMG2 from '/public/images/image2.png';
-import IMG3 from '/public/images/image3.png';
-import IMG4 from '/public/images/image4.png';
+import IMG1 from '/public/images/image1.jpg';
+import IMG2 from '/public/images/image2.jpg';
+import IMG3 from '/public/images/image3.jpg';
+import IMG4 from '/public/images/image4.jpg';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -54,13 +54,13 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>
+      <>
         <TopBar />
         {/* <Landing /> */}
         <section className={styles.swipe_wrapper}>
           <YSwipe options={OPTIONS} data={ImageData} />
         </section>
-      </main>
+      </>
     </>
   );
 }
