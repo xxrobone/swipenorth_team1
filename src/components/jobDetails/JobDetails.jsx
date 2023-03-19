@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { RiBookmarkLine, RiCloseLine, RiArrowRightLine } from 'react-icons/ri'
@@ -14,14 +14,13 @@ const variants = {
 
 const JobDetails = ({ title, subtitle, desc, img, id }) => {   
     const [showMsg, setShowMsg] = useState(false)
-    const { jobId } = useRouter()
-    
+    const [jobsLibrary, setJobsLibrary] = useState([])
     const router = useRouter()
 
     const saveJob = (id) => {
         let myjobs = JSON.parse(localStorage.getItem('myjobs') || "[]")
-        let newjob;
-        
+        let newJob;
+
           if (id) {
             newJob = {
                 id,
@@ -38,19 +37,33 @@ const JobDetails = ({ title, subtitle, desc, img, id }) => {
         window.localStorage.setItem('myjobs', JSON.stringify(myjobs))
     }
     
-    function handleClick() {
+    function handleSave() {
         saveJob(id)
         setShowMsg(showMsg => !showMsg)
         console.log(showMsg)
         setTimeout(() => {
           setShowMsg(false)
         }, 3000)
-      }
+    }
+
+    /* checking jobs on localstorage */
+    console.log('these are my jobs from library \n' + jobsLibrary.map((job) => console.log('\n ' + job.title + job.subtitle)))
+    
+
+    // getting the jobs from localstorage
+    useEffect(() => {
+        const myjobs = JSON.parse(localStorage.getItem('myjobs'));
+        if (myjobs) {
+          setJobsLibrary(myjobs);
+        } else {
+            setJobsLibrary([])
+        }
+    }, [])
 
   return (
       <article className={styles.jobs_wrapper} key={id}>
           <div className={styles.icons_wrapper}>
-              <RiBookmarkLine />
+              <RiBookmarkLine onClick={() => handleSave()}/>
               <RiCloseLine onClick={() => router.back()} />
           </div>
           <div className={styles.img}>
@@ -70,7 +83,7 @@ const JobDetails = ({ title, subtitle, desc, img, id }) => {
         variants={variants}
         animate={showMsg ? "show" : "hide"}
         >
-          Saved game to library
+          Saved job to library
         </motion.p>
       </div>
           </article>
