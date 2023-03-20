@@ -7,7 +7,7 @@
   background-color: #f1ecec;
   border-radius: 10px;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .container{
@@ -18,7 +18,7 @@
 }
 
 .imgContainer{
-width: 50%;
+width: 30%;
 }
 
 .img {
@@ -27,7 +27,7 @@ margin: 1em;
 overflow: hidden;
 }
 
-.jobContainer{
+.jobContainer {
  display: grid;
  color: #000;
 grid-template-columns: 1fr;

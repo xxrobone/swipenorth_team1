@@ -1,12 +1,15 @@
-import TopBar from "../topbar/TopBar";
+import Footer from "../footer/Footer";
+import Header from "../header/Header";
 
-import styles from './Layout.module.scss'
+import styles from './Layout.module.css'
+
 
 export default function Layout({ children }) {
     return (
       <>
-       <TopBar />
-        <main className={styles.main}>{children}</main>        
-      </>
+         <Header />
+        <main className={styles.main}>{children}</main>  
+        <Footer />      
+        </>
     )
   }

@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 // styles
-import styles from './SwipeUpRight.module.scss'
+import styles from './SwipeUpRight.module.css'
 
 const SwipeUpArrow = () => {
   return (
