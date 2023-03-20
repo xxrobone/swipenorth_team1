@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.row}>
-        <Link href="/landingpage">
+        <Link href="/">
         <span className={styles.headerLogo}>
           <Image src={logoVit} alt="logo" width={107} />
         </span>
