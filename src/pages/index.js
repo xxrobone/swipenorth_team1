@@ -73,9 +73,9 @@ export default function Home() {
         {/* <Landing /> */}
         <section className={styles.swipe_wrapper}>
         {showBox && <JobInfoBox text={displayText} onClose={closeBox}/>}
-      <button onClick={handleClick}>Display Job Info</button>
-
+      <div onClick={() => handleClick(ImageData[0])}>
           <YSwipe options={OPTIONS} data={ImageData} />
+          </div>
     </section>
 
       </main>
