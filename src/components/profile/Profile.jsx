@@ -2,7 +2,6 @@ import React from 'react'
 import profilepic from 'public/images/profilepic.png'
 import Image from 'next/image'
 import styles from './Profile.module.scss'
-import VisaCV from '../visacv/VisaCV'
 
 export default function Profile() {
   return (
@@ -25,7 +24,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      <VisaCV />
     </>
   )
 }

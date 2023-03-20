@@ -6,7 +6,7 @@ import Landing from '@/components/landing/Landing'
 
 export default function App({ Component, pageProps }) {
   const [hasVisited, setHasVisited] = useState(false)
-
+  const Layout = Component.Layout || ((page) => page.children);
   return (
     <Layout>
       {
@@ -20,3 +20,4 @@ export default function App({ Component, pageProps }) {
   
   )
 }
+const EmptyLayout = ({children})=><>{children}</>

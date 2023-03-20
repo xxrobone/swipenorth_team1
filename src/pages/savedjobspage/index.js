@@ -1,4 +1,6 @@
 import SavedJobs from '@/components/savedJobs/savedJobs.jsx';
+import SavedJobsLayout from '@/components/layout/SavedJobsLayout'
+
 
 export default function SavedJobsPage() {
   return (
@@ -9,3 +11,4 @@ export default function SavedJobsPage() {
     </>
   );
 }
+SavedJobsPage.Layout = SavedJobsLayout;

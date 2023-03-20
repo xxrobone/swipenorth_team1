@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css';
 import Landing from '@/components/landing/Landing';
 import TopBar from '@/components/topbar/TopBar';
 import YSwipe from '@/components/yaxisswipe/YSwipe';
+import Layout from '@/components/layout/Layout'
 
 import IMG1 from '/public/images/image1.png';
 import IMG2 from '/public/images/image2.png';
@@ -64,3 +65,4 @@ export default function Home() {
     </>
   );
 }
+Home.Layout = Layout;
