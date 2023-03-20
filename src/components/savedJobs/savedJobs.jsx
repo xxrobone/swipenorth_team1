@@ -28,6 +28,7 @@ function Job(obj) {
       id: 4,
       img: `/images/image4.png`
     },
+    
   ];
 
     return (

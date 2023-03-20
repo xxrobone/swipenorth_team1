@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Image from 'next/image'
 import styles from '../landing/Landing.module.css'
 import SwipeUpArrow from '../swipeUpArrow/SwipeUpArrow'
@@ -6,7 +7,15 @@ import logo from '../../../public/images/skelleftea_logo_vit.png'
 import Link from 'next/link'
 
 
-export default function Landing({hasVisited, setHasVisited}) {
+export default function Landing( { setHasVisited }) {
+
+  const VISITED = true
+  
+  const handleClick = () => {
+    localStorage.setItem('visitBefore', JSON.stringify(VISITED))
+    setHasVisited(true)
+  }
+
   return (
     <div className={styles.main}>
       <div className={styles.logo}>
@@ -20,7 +29,7 @@ export default function Landing({hasVisited, setHasVisited}) {
       />
       <div className={styles.content}>
         <h1>Välkommen hem!</h1>
-        <Link href='/' onClick={() => setHasVisited(true)}>
+        <Link href='/' onClick={() => handleClick()}>
         <SwipeUpArrow />
         </Link>
       </div>
