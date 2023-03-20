@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Swipe North</title>
         <meta
           name='description'
           content='Swipe North application for jobs in Skellefteå community'
