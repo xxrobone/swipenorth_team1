@@ -2,6 +2,7 @@ import Head from 'next/head';
 // import Job from '../components/savedJobs/savedJobs'
 import styles from '@/styles/Home.module.css';
 import TopBar from '@/components/topbar/TopBar';
+import Layout from '@/components/layout/Layout'
 import JobSwipe from '@/components/jobswipe/JobSwipe';
 import { jobData } from '@/data/jobs';
 
@@ -28,3 +29,4 @@ export default function Home() {
     </>
   );
 }
+Home.Layout = Layout;

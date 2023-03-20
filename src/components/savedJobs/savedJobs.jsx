@@ -1,7 +1,5 @@
 import Image from 'next/image';
-import styles from "./savedJobs.module.css"
-import HittaFlerJobb from '../hittaFlerJobb/HittaFlerJobb';
-
+import styles from "../savedJobs/savedJobs.module.css"
 
 function Job(obj) {
 
@@ -51,7 +49,6 @@ function Job(obj) {
             </div>
         ))}
       </div>
-      <HittaFlerJobb />
       </>
     )
 }

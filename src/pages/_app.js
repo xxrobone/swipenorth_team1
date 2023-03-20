@@ -13,6 +13,7 @@ const Loading = () => (
 
 export default function App({ Component, pageProps }) {
   const [hasVisited, setHasVisited] = useState(false)
+  const Layout = Component.Layout || ((page) => page.children);
 
   useEffect(() => {
     const visited = JSON.parse(localStorage.getItem('visitBefore'));
@@ -38,3 +39,4 @@ export default function App({ Component, pageProps }) {
   
   )
 }
+const EmptyLayout = ({children})=><>{children}</>
