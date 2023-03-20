@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import styles from "../savedJobs/savedJobs.module.css"
+import styles from "./savedJobs.module.css"
 import HittaFlerJobb from '../hittaFlerJobb/HittaFlerJobb';
-
 
 
 function Job(obj) {
@@ -31,6 +30,7 @@ function Job(obj) {
       id: 4,
       img: `/images/image4.png`
     },
+    
   ];
 
     return (
